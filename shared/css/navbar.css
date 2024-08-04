@@ -1,0 +1,248 @@
+/* Top Navbar */
+.navbar-top {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  border-bottom: 1px solid gray;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  margin-left: 15px;
+  padding-left: 25px;
+  position: relative;
+  font-family: 'MuseoModerno';
+  text-transform: uppercase;
+}
+
+.icon::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+}
+
+.lock::before {
+  background-image: url("/assets/icons/lock.png");
+}
+
+.translate::before {
+  background-image: url("/assets/icons/translate.png");
+}
+
+.search::before {
+  background-image: url("/assets/icons/search.png");
+}
+
+.facebook{
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/icons/facebook-app-symbol.png");
+  background-size: cover;
+  margin-left: 15px;
+  padding-left: 0;
+}
+
+/* Navbar Background */
+.navbar-background {
+  position: relative;
+  height: 200px;
+  background-image: url("/assets/img/navbar-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.navbar-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.534);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+.navbar-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.navbar-logo {
+  width: 160px;
+  height: 160px;
+  background-image: url("/assets/img/logo.jpg");
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  border-radius: 80px;
+}
+
+.navbar-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-header-1 {
+  color: #003366;
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.navbar-header-2 {
+  color: #ffd700;
+  font-size: 55px;
+}
+
+.navbar-header-1,
+.navbar-header-2 {
+  font-family: "Ibarra Real Nova";
+  text-transform: uppercase;
+}
+
+/* Main Navbar */
+.navbar-main {
+  background-color: #003366;
+  padding: 0 20px;
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 2px;
+  background-color: white;
+  margin: 4px 0;
+  width: 25px;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 10px;
+}
+
+.nav-item a {
+  display: block;
+  padding: 15px 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "MuseoModerno";
+  font-weight: bold;
+}
+
+.nav-item a::before {
+  content: "•";
+  color: #ffd700;
+  margin-right: 10px;
+}
+
+.active a {
+  border-bottom: 2px solid #ffd700;
+}
+
+@media (max-width: 768px) {
+  .navbar-top {
+      justify-content: center;
+  }
+
+  .navbar-main {
+      padding: 10px;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  .menu-list {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .menu-list.active {
+      display: flex;
+  }
+
+  .nav-item {
+      margin: 10px 0;
+  }
+
+  .navbar-background {
+      height: auto;
+      padding: 20px;
+  }
+
+  .navbar-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .navbar-logo {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  .navbar-header-1 {
+      font-size: 36px;
+  }
+
+  .navbar-header-2 {
+      font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-icons .icon {
+      font-size: 12px;
+      margin-left: 10px;
+  }
+
+  .navbar-logo {
+      width: 100px;
+      height: 100px;
+  }
+
+  .navbar-header-1 {
+      font-size: 28px;
+  }
+
+  .navbar-header-2 {
+      font-size: 20px;
+  }
+}
