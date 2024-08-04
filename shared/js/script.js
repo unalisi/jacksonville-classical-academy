@@ -33,3 +33,17 @@ function toggleMenu() {
     const menuList = document.querySelector('.menu-list');
     menuList.style.display = menuList.style.display === 'flex' ? 'none' : 'flex';
 }
+
+//Açılış Animasyonu
+document.addEventListener("DOMContentLoaded", function() {
+    const splashScreen = document.querySelector('.splash-screen');
+    const content = document.querySelector('.content');
+
+    setTimeout(() => {
+        splashScreen.style.opacity = '0'; 
+        setTimeout(() => {
+            splashScreen.style.display = 'none'; 
+            content.classList.add('show'); 
+        }, 1000); 
+    }, 1000); 
+});
